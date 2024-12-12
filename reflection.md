@@ -1,7 +1,7 @@
 # Reflection
 
-Student Name:  name
-Sudent Email:  email
+Student Name:  Gabriel Lucey
+Sudent Email:  gplucey@syr.edu
 
 ## Instructions
 
@@ -23,3 +23,9 @@ Examples:
 **Best Reflection** "I learned when to use while vs for loops. While loops are for sentiel-controlled values (waiting for a condition to occur), vs for loops are for iterating over collections of fixed values."
 
 `--- Reflection Below This Line ---`
+
+Doing this assignment in class was a great way to explore mapping with a UI like Streamlit. I struggled most with etl.py as I had some trouble in class trying to scrape the correct elements. etl.py, however, was a great way to reflect on past concepts such as pivot tables in the top_locations function and merging dataframes in the top_locations_mappable function. I was originally confused because I was used to merging tables using left_on or right_on, but since the column names were identical, I found that I could use the on parameter instead.
+
+This assignment was important as it helped me work on my mapping skills using GeoPandas. By mapping the tickets on Streamlit, I found that folium_static from streamlit_folium must be used to visualize maps on Streamlit. This assignment helped me explore new parameters such as the marker_kwds, which helped map specific points on the map, and vmin and vmax, which helped control the zoom.
+
+Finally, I was able to learn how to map visualizations using Seaborn and Streamlit. I found that if you wanted to visualize two plots side by side, you set each of them up in a column and use with loops to actively change the visualizations when input is changed. Overall, this assignment was very useful for refreshing myself on old topics and further developing my visualization skills.

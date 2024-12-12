@@ -21,4 +21,16 @@ if location:
     col1, col2 = st.columns(2)
 
     with col1:
-        pass
+        st.metric("Total tickets issued", filtered_df.shape[0])
+        fig1, ax1 = plt.subplots()
+        ax1.set_title('Tickets Issued by Hour of Day')
+        sns.barplot(data=filtered_df, x="hourofday", y="count", estimator="sum", hue="hourofday", ax=ax1)
+        st.pyplot(fig1)
+    with col2:
+        st.metric("Total amount", f"$ {filtered_df['amount'].sum()}")
+        fig2, ax2 = plt.subplots()
+        ax2.set_title('Tickets Issued by the Day of Week')
+        sns.barplot(data=filtered_df, x="dayofweek", y="count", estimator="sum", hue="dayofweek", ax=ax2)
+        st.pyplot(fig2)
+
+    st.map(filtered_df[['lat', 'lon']])
